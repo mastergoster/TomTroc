@@ -1,5 +1,13 @@
-# Spéciﬁcations pour le site TomTroc
+# Projet TomTroc
 
+## Installation
+
+1. Cloner le projet
+2. lancer la commands ```php -S localhost:8000 -t public```
+3. ouvrir le navigateur et taper l'url http://localhost:8000/
+
+
+## Spéciﬁcations pour le site TomTroc
 Le but de ce projet est de réaliser un site permettant la mise en contact de lecteurs, aﬁn qu’ils puissent partager et échanger leurs livres.
 
 Ce projet est un MVP, c'est-m-dire “Minimal Viable Product”, une première version qui doit fonctionner mais sera rapidement améliorée m l’avenir.
