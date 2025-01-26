@@ -6,4 +6,5 @@ use Core\Model\Table;
 
 final class UserTable extends Table
 {
+    
 }

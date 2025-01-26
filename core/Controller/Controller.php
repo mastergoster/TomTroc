@@ -2,6 +2,8 @@
 
 namespace Core\Controller;
 
+use App\Application;
+
 abstract class Controller
 {
     public function render(String $view, array $data = [])

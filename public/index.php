@@ -1,12 +1,14 @@
 <?php
+
 use Core\Controller\RouteurController;
 
 define("ROOT", dirname(__DIR__));
 
 
+
 spl_autoload_register(function ($class) {
     $class = str_replace('\\', '/', $class);
-    $class = str_replace('App', 'src', $class);
+    $class = str_replace('App/', 'src/', $class);
     $class = str_replace('Core', 'core', $class);
     if (file_exists(ROOT . '/' . $class . '.php')) {
         include(ROOT . '/' . $class . '.php');
@@ -14,6 +16,17 @@ spl_autoload_register(function ($class) {
         throw new \Exception('Class ' . $class . ' not found');
     }
 });
+try {
+    App\Application::getInstance();
+} catch (\Exception $e) {
+    if (PHP_SAPI === 'cli') {
+        echo $e->getMessage() . "\n\n";
+        die();
+    }
+    echo "<h1 style='text-align: center;'>" . $e->getMessage() . "</h1>";
+    die();
+}
+
 
 $routeur = new RouteurController();
 

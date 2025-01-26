@@ -14,7 +14,7 @@ CREATE TABLE `users` (
 CREATE TABLE `books` (
   `id` integer PRIMARY KEY,
   `title` varchar(255) NOT NULL,
-  `auteur` varchar(255) NOT NULL,
+  `author` varchar(255) NOT NULL,
   `picture` varchar(255),
   `description` text NOT NULL,
   `user_id` integer NOT NULL,
@@ -34,18 +34,18 @@ CREATE TABLE `messages` (
 );
 
 INSERT INTO `users` (`username`, `role`, `mail`, `password`, `created_at`) VALUES
-('user1', 'user', 'user1@example.com', 'password1', CURRENT_TIMESTAMP),
-('user2', 'user', 'user2@example.com', 'password2', CURRENT_TIMESTAMP),
-('user3', 'user', 'user3@example.com', 'password3', CURRENT_TIMESTAMP),
-('user4', 'user', 'user4@example.com', 'password4', CURRENT_TIMESTAMP),
-('user5', 'user', 'user5@example.com', 'password5', CURRENT_TIMESTAMP),
-('user6', 'user', 'user6@example.com', 'password6', CURRENT_TIMESTAMP),
-('user7', 'user', 'user7@example.com', 'password7', CURRENT_TIMESTAMP),
-('user8', 'user', 'user8@example.com', 'password8', CURRENT_TIMESTAMP),
-('user9', 'user', 'user9@example.com', 'password9', CURRENT_TIMESTAMP),
-('user10', 'user', 'user10@example.com', 'password10', CURRENT_TIMESTAMP);
+('user1', 'user', 'user1@example.com', 'password', CURRENT_TIMESTAMP),
+('user2', 'user', 'user2@example.com', 'password', CURRENT_TIMESTAMP),
+('user3', 'user', 'user3@example.com', 'password', CURRENT_TIMESTAMP),
+('user4', 'user', 'user4@example.com', 'password', CURRENT_TIMESTAMP),
+('user5', 'user', 'user5@example.com', 'password', CURRENT_TIMESTAMP),
+('user6', 'user', 'user6@example.com', 'password', CURRENT_TIMESTAMP),
+('user7', 'user', 'user7@example.com', 'password', CURRENT_TIMESTAMP),
+('user8', 'user', 'user8@example.com', 'password', CURRENT_TIMESTAMP),
+('user9', 'user', 'user9@example.com', 'password', CURRENT_TIMESTAMP),
+('user10', 'user', 'user10@example.com', 'password', CURRENT_TIMESTAMP);
 
-INSERT INTO `books` (`title`, `auteur`, `picture`, `description`, `user_id`, `status`, `created_at`) VALUES
+INSERT INTO `books` (`title`, `author`, `picture`, `description`, `user_id`, `status`, `created_at`) VALUES
 -- Livres pour user1
 ('Book 1-1', 'Author 1', 'picture1.jpg', 'Description of Book 1-1', 1, 'available', CURRENT_TIMESTAMP),
 ('Book 1-2', 'Author 1', 'picture2.jpg', 'Description of Book 1-2', 1, 'available', CURRENT_TIMESTAMP),

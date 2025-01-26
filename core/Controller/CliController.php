@@ -2,8 +2,7 @@
 
 namespace Core\Controller;
 
-
-
+use App\Application;
 
 final class   CliController extends Controller
 {
@@ -43,15 +42,7 @@ final class   CliController extends Controller
      */
     public function dbinit()
     {
-        if (!file_exists(ROOT . '/config/config.php')) {
-            throw new \Exception("Le fichier config n'existe pas.\n'config/config.php'");
-        }
-        $config = require ROOT . '/config/config.php';
-        if (!isset($config['DB_Engin']) || !isset($config['DB_Name']) || !isset($config['DB_Host'])) {
-            throw new \Exception("Le fichier config n'est pas bien configuré");
-        }
-        $db = new \PDO("{$config['DB_Engin']}:{$config['DB_Host']}");
-        $db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+        $db = Application::getInstance()->getDb()->getPDO();
         $sql = file_get_contents(ROOT . '/TomTroc_sqlite.sql');
         $db->exec($sql);
         echo "Database initialized\n\n";
