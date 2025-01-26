@@ -3,8 +3,9 @@
 ## Installation
 
 1. Cloner le projet
-2. lancer la commands ```php -S localhost:8000 -t public```
-3. ouvrir le navigateur et taper l'url http://localhost:8000/
+2. lancer la commande ```php cmd.php init```
+3. lancer la commands ```php cmd.php server```
+4. ouvrir le navigateur et taper l'url http://localhost:8000/ ou l'url qui s'affiche dans la console
 
 
 ## Spéciﬁcations pour le site TomTroc

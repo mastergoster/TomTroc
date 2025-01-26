@@ -20,6 +20,7 @@ class RouteConfig
         return [
             ['help', CliController::class, 'help'],
             ['serve', CliController::class, 'startServer'],
+            ['init', CliController::class, 'dbinit']
         ];
     }
 }

@@ -25,7 +25,12 @@ if (PHP_SAPI === 'cli') {
     }
 
     if (isset($_SERVER['argv'][1])) {
-        $routeur->run($_SERVER['argv'][1]);
+        try {
+            $routeur->run($_SERVER['argv'][1]);
+        } catch (Exception $e) {
+            echo $e->getMessage() . "\n\n";
+        }
+        
     }
 
 
@@ -37,7 +42,8 @@ if (PHP_SAPI === 'cli') {
         try {
             $routeur->run($line);
         } catch (Exception $e) {
-            $routeur->run("help");
+            echo $e->getMessage() . "\n\n";
+            $routeur->run("help") . "\n\n";
         }
         
     }
