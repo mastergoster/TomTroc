@@ -1,0 +1,135 @@
+:root {
+    --Background-light: rgba(250, 249, 247, 1);
+    --Gris-clair: rgba(245, 243, 239, 1);
+    --Gris-fonce: rgba(41, 41, 41, 1);
+    --Gris-texte: rgba(166, 166, 166, 1);
+    --Vert-principal: rgba(0, 172, 102, 1);
+    --Blanc: rgba(255, 255, 255, 1);
+    --Noir: rgba(0, 0, 0, 1);
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--Background-light);
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Background-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--Gris-texte);
+    margin: 0;
+    padding: 0;
+}
+
+
+
+header {
+    margin: 15px 20px 14px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+
+    .logo{
+        width: 155px;
+        height: 51px;
+    }
+
+    nav
+    {
+        width: 100%;
+        max-width: 1140px;
+
+        a {
+            text-decoration: none;
+            text-wrap: nowrap;
+            color: var(--Gris-fonce);
+            font-size: 14px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            image{
+                width: 15px;
+                height: 13px;
+            }
+            span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 400;
+                height: 15px;
+                color: var(--Gris-clair);
+                background-color: var(--Gris-fonce);
+                border-radius: 40%;
+                font-size: 8.25px;
+                padding : 2px;
+            }
+        }
+
+        a.active {
+            font-weight: 600;
+        }
+
+    }
+
+    nav, 
+    nav div,
+    nav ul
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        height: 17px;
+        gap: 60px;
+
+        .separator{
+            width: 1px;
+            height: 19px;
+            overflow: hidden;
+            background: var(--Gris-texte);
+        }
+    }
+    nav div ul
+    {
+        gap: 44px;
+    }
+
+}
+
+footer {
+    height: 61px;
+    padding: 21px 46px 23px;
+    nav, 
+    nav div,
+    nav ul
+    {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        height: 12px;
+        gap: 40px;
+
+        text-wrap: nowrap;
+        color: var(--Gris-fonce);
+        font-size: 12px;
+        font-weight: 400;
+    }
+    a {
+        text-decoration: none;
+        text-wrap: nowrap;
+        color: var(--Gris-fonce);
+        font-size: 12px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+    }
+}
+

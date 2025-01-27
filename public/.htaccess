@@ -1,2 +1,8 @@
-RewriteEngine On
-RewriteRule (.*) index.php [L]
+RewriteEngine on
+
+<IfModule mod_headers.c>
+    Header always set Access-Control-Allow-Origin "*"
+</IfModule>
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
