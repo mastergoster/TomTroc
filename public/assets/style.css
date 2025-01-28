@@ -1,5 +1,6 @@
 :root {
-    --Background-light: rgba(250, 249, 247, 1);
+    --Background-light: rgba(245, 243, 239, 1);
+    --Background-ultra-light: rgba(250, 249, 247, 1);
     --Gris-clair: rgba(245, 243, 239, 1);
     --Gris-fonce: rgba(41, 41, 41, 1);
     --Gris-texte: rgba(166, 166, 166, 1);
@@ -97,7 +98,13 @@ header {
     }
     nav div ul
     {
-        gap: 44px;
+                gap: 44px;
+    }
+    nav ul.compte
+    {
+        @media (max-width: 1024px) {
+            display: none;
+        }
     }
 
 }
@@ -105,6 +112,7 @@ header {
 footer {
     height: 61px;
     padding: 21px 46px 23px;
+    background-color: var(--Background-ultra-light);
     nav, 
     nav div,
     nav ul
@@ -131,5 +139,263 @@ footer {
         display: flex;
         align-items: center;
     }
+}
+
+.hero{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding : 80px 0 100px;
+    gap: 100px;
+    div{
+        display: flex;
+        flex-direction: column;
+
+        width: 329px;
+        color: #000;
+        gap: 16px;
+        div{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 20px;
+                height: 20px;
+            }
+            span{
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 1.2;
+            }
+        }
+        h1{
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+            font-family: "Playfair Display" , serif;
+        }
+        p{
+            width: 328px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+        .btn{
+            justify-self: self-start;
+            width: 152px;
+        }
+    }
+    div.image{
+        align-items: end;
+        justify-content: end;
+        gap: 12px;
+        p{
+            text-align: end;
+            color: var(--Gris-texte);
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 400;
+        }
+    }
+}
+
+.last_books{
+    min-height: 702px;
+    
+    overflow: hidden;
+    background-color: var(--Background-ultra-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+        font-family: "Playfair Display" , serif;
+    }
+    a.btn.btn-primary{
+        margin-top: 48px;
+    }
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 38px;
+        article {
+            overflow: hidden;
+            margin-top: 80px;
+            width: 200px;
+            box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.01);
+            background-color: var(--Blanc);
+            align-items: flex-start;
+            flex-shrink: 0;
+            border-radius: 0 0 10px 10px;
+            img{
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+            }
+            div{
+                padding-left: 14px;
+                display: block;
+                padding-bottom: 23px;
+                h3 {
+                    margin: 0;
+                    margin-top: 19px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1.2;
+                }
+                p{
+                    margin: 0;
+                    margin-top: 8px;
+                }
+                p.vendeur{
+                    color: var(--Gris-texte);
+                    font-family: 'Inter', sans-serif;
+                    font-size: 10px;
+                    font-style: italic;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}
+
+section.how_it_work{
+    min-height: 555px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h2{
+        margin-top: 80px;
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: 32px;
+        
+        margin: 0;
+        font-family: "Playfair Display" , serif;
+    }
+    p{
+        margin-top: 24px;
+        max-width: 397px;
+        text-align: center;
+    };
+    div{
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 36px;
+        article{
+            padding: 44px 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 215px;
+            height: 139px;
+            border-radius: 10px;
+            background: var(--Blanc);
+            flex-shrink: 0;
+            text-align: center;
+            p{
+                margin-top: 0;
+            }
+        }
+    }
+    a.btn{
+        margin-top: 48px;
+    }
+}
+
+section.values{
+    height: 897px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    img{
+        height: 229px;
+        object-fit: cover;
+        width: 100%;
+    }
+    h2{
+        color: var(--Gris-fonc);
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        font-weight: 400;
+        width: 392px;
+        text-align: left;
+        margin-top: 74px;
+    }
+    p{
+        width: 392px;
+        color: var(--Gris-fonc);
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-top: 28px;
+    }
+    div{
+        display: flex;
+        height: 102px;
+        width: 392px;
+        margin-top: 25px;
+        
+        p.signature{
+            color: var(--Gris-texte, #A6A6A6);
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 14px;
+        }
+        img{
+            margin-right: -50px;
+            height: 102px;
+            width: auto;
+        }
+    }
+    
+}
+
+
+.btn {
+    text-decoration: none;
+    color: var(--Background-light);
+    display: inline-block;
+    padding: 22px 38px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-primary{ 
+    background: var(--Vert-principal, #00AC66);
+}
+
+.btn-secondary{ 
+    background: var(--Background-light,);
+    color: var(--Vert-principal, #00AC66);
+    border: 1px solid var(--Vert-principal, #00AC66);
 }
 

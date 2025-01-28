@@ -2,6 +2,7 @@
 
 namespace App\Model\Entity;
 
+use App\Model\Table\UserTable;
 use Core\Model\Entity;
 
 final class BooksEntity extends Entity
@@ -14,6 +15,7 @@ final class BooksEntity extends Entity
     private $status;
     private $user_id;
     private $created_at;
+    private UserEntity|null $user = null;
 
     public function getId(): int
     {
@@ -93,5 +95,13 @@ final class BooksEntity extends Entity
     public function setUserId(int $user_id): void
     {
         $this->user_id = $user_id;
+    }
+
+    public function user(): UserEntity
+    {
+        if ($this->user === null) {
+            $this->user = (new UserTable())->find($this->user_id);
+        }
+        return $this->user;
     }
 }

@@ -20,7 +20,7 @@
                     <li><a href="#">Nos livres à l'échange</a></li>
                 </ul>
             </div>
-            <ul>
+            <ul class="compte">
                 <li class="separator"></li>
                 <li><a href="#"><img src="assets/images/icon-messagerie.svg" alt="logo message">Messagerie<span>1</span></a></li>
                 <li><a href="#"><img src="assets/images/icon-mon-compte.svg" alt="logo mon compte">Mon Compte</a></li>
